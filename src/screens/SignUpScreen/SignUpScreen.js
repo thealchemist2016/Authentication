@@ -24,10 +24,10 @@ const SignUpScreen = () => {
     };
 
     const onSignInFacebook = () => {
-    console.warn('onSignInFacebookfacebook');
+    console.warn('onSignInFacebook');
     };
     const onSignInGoogle = () => {
-        console.warn('onSignInFacebookGoole');
+        console.warn('onSignInGoogle');
         };
         const onSignInApple = () => {
             console.warn('onSignInApple');
