@@ -5,7 +5,7 @@ import CustomInput from '../../components/CustomInput'
 
 const SignInScreen = () => {
 
-    const [Username, setUsername] = useState('') ;
+    const [Username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
     const {height} = useWindowDimensions();
@@ -18,8 +18,17 @@ const SignInScreen = () => {
             resizeMode="contain"
              />
              
-            <CustomInput placeholder="Username" value={Username} setValue= {setUsername} />
-            <CustomInput placeholder="Password" value={password} setValue= {setPassword} />
+            <CustomInput 
+            placeholder="Username" 
+            value={Username} 
+            setValue= {setUsername} 
+            />
+            <CustomInput 
+            placeholder="Password" 
+            value={password} 
+            setValue= {setPassword}
+            secureTextEntry
+            />
 
         </View>
     );
