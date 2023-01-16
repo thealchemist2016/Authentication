@@ -1,15 +1,22 @@
-import React from "react"
+import React from 'react'
 import {View, Text, Image, StyleSheet, useWindowDimensions} from 'react-native'
 import logo from '../../../assets/images/logo.png'
+import CustomInput from '../../components/CustomInput'
 
 const SignInScreen = () => {
     const {height} = useWindowDimensions();
+
     return (
         <View style={styles.root}>
-            <Image source={logo} style={styles.logo} resizeMode="contain" />
+            <Image 
+            source={logo}
+            style={[styles.logo, {height: height * 0.3}] }
+            resizeMode="contain"
+             />
+            < CustomInput />
         </View>
-    )
-}
+    );
+};
 
 const styles = StyleSheet.create({
  root: {
@@ -19,7 +26,7 @@ const styles = StyleSheet.create({
     logo: {
 width:'80%',
 maxWidth: 400,
-height: 200,
+maxHeight: 200,
     },
   },
 );
