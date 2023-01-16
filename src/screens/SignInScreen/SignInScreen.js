@@ -1,14 +1,37 @@
 import React, {useState} from 'react';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {View, Text, Image, StyleSheet, useWindowDimensions} from 'react-native'
 import logo from '../../../assets/images/logo.png'
 import CustomInput from '../../components/CustomInput'
 import CustomButton from '../../components/CustomButton/CustomButton';
+
 const SignInScreen = () => {
 
     const [Username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
     const {height} = useWindowDimensions();
+
+    const onSignInPressed = () => {
+        console.warn("Sign in")
+    }
+
+    const onForgotPasswordPressed = () => {
+        console.warn('onForgotPasswordPressed');
+    };
+
+    const onSignInFacebook = () => {
+    console.warn('onSignInFacebookfacebook');
+    };
+    const onSignInGoogle = () => {
+        console.warn('onSignInFacebookGoole');
+        };
+        const onSignInApple = () => {
+            console.warn('onSignInApple');
+            };
+            const onSignUpPress = () => {
+                console.warn('onSignUpPress');
+            };
 
     return (
         <View style={styles.root}>
@@ -30,8 +53,40 @@ const SignInScreen = () => {
             secureTextEntry
             />
 
-            <CustomButton />
+            <CustomButton 
+            text="Sign In" 
+            onPress={onSignInPressed} />
 
+            <CustomButton 
+            text="Forgot Password?" 
+            onPress={onForgotPasswordPressed} 
+            type="TERTIARY"
+             />
+
+<CustomButton 
+text="Sign In With Facebook" 
+onPress={onSignInFacebook}
+bgColor="#E7EAF4"
+fgColor= "#4765A9"
+ />
+<CustomButton 
+text="Sign In With Google" 
+onPress={onSignInGoogle} 
+bgColor="#FAE9EA"
+fgColor= "#DD4D44"
+/>
+<CustomButton 
+text="Sign In With Apple" 
+onPress={onSignInApple} 
+bgColor="#e3e3e3"
+fgColor= "#363636"
+/>
+
+<CustomButton
+text=" Don't have an account? Create one"
+onPress= {onSignUpPress}
+type="TERTIARY"
+/>
         </View>
     );
 };
