@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import {View, Text, Image, StyleSheet, useWindowDimensions} from 'react-native'
+import {View, Text, Image, StyleSheet, useWindowDimensions, ScrollView} from 'react-native'
 import logo from '../../../assets/images/logo.png'
 import CustomInput from '../../components/CustomInput'
 import CustomButton from '../../components/CustomButton/CustomButton';
@@ -34,6 +34,7 @@ const SignInScreen = () => {
             };
 
     return (
+        <ScrollView>
         <View style={styles.root}>
             <Image 
             source={logo}
@@ -88,6 +89,7 @@ onPress= {onSignUpPress}
 type="TERTIARY"
 />
         </View>
+        </ScrollView>
     );
 };
 
