@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, Image, StyleSheet, useWindowDimensions} from 'react-native'
 import logo from '../../../assets/images/logo.png'
 import CustomInput from '../../components/CustomInput'
-
+import CustomButton from '../../components/CustomButton/CustomButton';
 const SignInScreen = () => {
 
     const [Username, setUsername] = useState('');
@@ -29,6 +29,8 @@ const SignInScreen = () => {
             setValue= {setPassword}
             secureTextEntry
             />
+
+            <CustomButton />
 
         </View>
     );
