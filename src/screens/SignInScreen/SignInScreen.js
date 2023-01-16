@@ -7,7 +7,7 @@ const SignInScreen = () => {
 
     const [Username, setUsername] = useState('') ;
     const [password, setPassword] = useState('');
-    
+
     const {height} = useWindowDimensions();
 
     return (
@@ -17,6 +17,7 @@ const SignInScreen = () => {
             style={[styles.logo, {height: height * 0.3}] }
             resizeMode="contain"
              />
+             
             <CustomInput placeholder="Username" value={Username} setValue= {setUsername} />
             <CustomInput placeholder="Password" value={password} setValue= {setPassword} />
 
