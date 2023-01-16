@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react';
 import {View, Text, Image, StyleSheet, useWindowDimensions} from 'react-native'
 import logo from '../../../assets/images/logo.png'
 import CustomInput from '../../components/CustomInput'
 
 const SignInScreen = () => {
+
+    const [Username, setUsername] = useState('') ;
+    const [password, setPassword] = useState('');
+    
     const {height} = useWindowDimensions();
 
     return (
@@ -13,7 +17,9 @@ const SignInScreen = () => {
             style={[styles.logo, {height: height * 0.3}] }
             resizeMode="contain"
              />
-            < CustomInput />
+            <CustomInput placeholder="Username" value={Username} setValue= {setUsername} />
+            <CustomInput placeholder="Password" value={password} setValue= {setPassword} />
+
         </View>
     );
 };
