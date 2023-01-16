@@ -19,6 +19,7 @@ const SignUpScreen = () => {
         console.warn("Sign in")
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const onForgotPasswordPressed = () => {
         console.warn('onForgotPasswordPressed');
     };
