@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {View, Text, Image, StyleSheet, useWindowDimensions, ScrollView} from 'react-native'
 import logo from '../../../assets/images/logo.png'
 import CustomInput from '../../components/CustomInput'
 import CustomButton from '../../components/CustomButton/CustomButton';
+import SocialSignInButtons from '../../components/SocialSignInButtons';
 
 const SignInScreen = () => {
 
@@ -20,18 +20,7 @@ const SignInScreen = () => {
         console.warn('onForgotPasswordPressed');
     };
 
-    const onSignInFacebook = () => {
-    console.warn('onSignInFacebookfacebook');
-    };
-    const onSignInGoogle = () => {
-        console.warn('onSignInFacebookGoole');
-        };
-        const onSignInApple = () => {
-            console.warn('onSignInApple');
-            };
-            const onSignUpPress = () => {
-                console.warn('onSignUpPress');
-            };
+   
 
     return (
         <ScrollView>
@@ -64,24 +53,7 @@ const SignInScreen = () => {
             type="TERTIARY"
              />
 
-<CustomButton 
-text="Sign In With Facebook" 
-onPress={onSignInFacebook}
-bgColor="#E7EAF4"
-fgColor= "#4765A9"
- />
-<CustomButton 
-text="Sign In With Google" 
-onPress={onSignInGoogle} 
-bgColor="#FAE9EA"
-fgColor= "#DD4D44"
-/>
-<CustomButton 
-text="Sign In With Apple" 
-onPress={onSignInApple} 
-bgColor="#e3e3e3"
-fgColor= "#363636"
-/>
+<SocialSignInButtons />
 
 <CustomButton
 text=" Don't have an account? Create one"

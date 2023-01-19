@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import {View, Text, Image, StyleSheet, ScrollView} from 'react-native'
 import CustomInput from '../../components/CustomInput'
 import CustomButton from '../../components/CustomButton/CustomButton';
-
+import SocialSignInButtons from '../../components/SocialSignInButtons';
 const SignUpScreen = () => {
 
     const [Username, setUsername] = useState('');
@@ -12,32 +12,15 @@ const SignUpScreen = () => {
     const [passwordRepeat, setPasswordRepeat] = useState('');
 
     const onRegisterPressed = () => {
-        console.warn('Sign in')
-    }
-
-    const onSignInPressed = () => {
-        console.warn("Sign in")
-    }
-
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const onForgotPasswordPressed = () => {
-        console.warn('onForgotPasswordPressed');
+        console.warn('onRegisterPressed');
     };
 
-    const onSignInFacebook = () => {
-    console.warn('onSignInFacebook');
-    };
-    const onSignInGoogle = () => {
-        console.warn('onSignInGoogle');
-        };
-        const onSignInApple = () => {
-            console.warn('onSignInApple');
-            };
-            const onSignUpPress = () => {
-                console.warn('onSignUpPress');
+   
+            const onSignInPress = () => {
+                console.warn('onSignInPress');
             };
             const onTermsOfUsePressed= () => {
-        console.warn('onTermsOfUsePressed')
+        console.warn('onTermsOfUsePressed');
             };
             const onPrivacyPressed= () => {
                 console.warn('onPrivacyPressed');
@@ -73,43 +56,25 @@ const SignUpScreen = () => {
             <CustomButton text="Register" onPress={onRegisterPressed} />
 <Text style={styles.text}>
     By registering, you confirm that you accept our {' '}
-    <Text styles={styles.link}> onPress={onTermsOfUsePressed} Terms of Use </Text> and {' '}
-    <Text styles={styles.link}> onPress={onPrivacyPressed} Privacy Policy</Text>
+    <Text style={styles.link}> onPress={onTermsOfUsePressed} Terms of Use </Text> and {' '}
+    <Text style={styles.link}> onPress={onPrivacyPressed} Privacy Policy</Text>
     </Text>
+
+
+    <SocialSignInButtons />
+
+
             <CustomButton 
-            text="Sign In" 
-            onPress={onSignInPressed} />
-
-           
-
-<CustomButton 
-text="Sign In With Facebook" 
-onPress={onSignInFacebook}
-bgColor="#E7EAF4"
-fgColor= "#4765A9"
- />
-<CustomButton 
-text="Sign In With Google" 
-onPress={onSignInGoogle} 
-bgColor="#FAE9EA"
-fgColor= "#DD4D44"
-/>
-<CustomButton 
-text="Sign In With Apple" 
-onPress={onSignInApple} 
-bgColor="#e3e3e3"
-fgColor= "#363636"
-/>
-
-<CustomButton
-text=" Don't have an account? Create one"
-onPress= {onSignUpPress}
-type="TERTIARY"
-/>
-        </View>
-        </ScrollView>
+            text="Have an account? Sign In" 
+            onPress={onSignInPress}
+            type='TERTIARY'
+            />
+</View>
+</ScrollView>
+        
     );
 };
+
 
 const styles = StyleSheet.create({
  root: {
@@ -127,7 +92,7 @@ const styles = StyleSheet.create({
         marginVertical: 10,
     },
     link: {
-        color: '#FDB079'
+        color: '#FDB075'
     },
   },
 );

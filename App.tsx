@@ -9,13 +9,14 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text} from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
-//import SignInScreen from './src/screens/SignInScreen';
+import SignInScreen from './src/screens/SignInScreen';
 import SignUpScreen from './src/screens/SignUpScreen';
+
 
 const App = () => {
   return (
     <SafeAreaView style={styles.root}>
-      <SignUpScreen />
+      
     </SafeAreaView>
   );
 };
