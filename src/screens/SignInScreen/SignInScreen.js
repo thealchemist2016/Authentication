@@ -20,10 +20,12 @@ const SignInScreen = () => {
         console.warn('onForgotPasswordPressed');
     };
 
-   
+    const onSignUpPress = () => {
+    console.warn('onSignUpPress')
+    };
 
     return (
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.root}>
             <Image 
             source={logo}
@@ -57,7 +59,7 @@ const SignInScreen = () => {
 
 <CustomButton
 text=" Don't have an account? Create one"
-onPress= {onSignUpPress}
+onPress= {onSignUpPressed}
 type="TERTIARY"
 />
         </View>
@@ -71,8 +73,8 @@ const styles = StyleSheet.create({
     padding: 20,
  },
     logo: {
-width:'80%',
-maxWidth: 400,
+width:'70%',
+maxWidth: 300,
 maxHeight: 200,
     },
   },

@@ -1,6 +1,8 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import { View, Text } from 'react-native'
+import logo from '../../../assets/images/logo.png'
 import CustomButton from '../CustomButton/CustomButton'
+
 const SocialSignInButtons = () => {
 
   const onSignInFacebook = () => {
@@ -12,7 +14,6 @@ const SocialSignInButtons = () => {
         const onSignInApple = () => {
             console.warn('onSignInApple');
             };
-
 
   return (
     <>
