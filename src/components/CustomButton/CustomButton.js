@@ -40,25 +40,28 @@ const styles = StyleSheet.create({
     }, 
 
     container_PRIMARY: {
-    backgroundColor: '#3B71f3'
+    backgroundColor: '#3B71F3'
     },
 
     container_SECONDARY: {
-    borderColor:'#3B71f3',
+    borderColor:'#3B71F3',
     borderWidth: 2,
 
     },
 
     container_TERTIARY: {},
+    
     text: {
       fontWeight: 'bold',
       color: 'white',
     },
+
+    text_SECONDARY: {
+      color: '#3B71F3'
+    },
+
     text_TERTIARY: {
       color: 'gray',
     },
-    text_SECONDARY: {
-      color: '#3B71f3'
-    }
     });
 export default CustomButton

@@ -10,35 +10,39 @@ import CustomButton from '../../components/CustomButton'
     const [password, setPassword] = useState('');
     const [passwordRepeat, setPasswordRepeat] = useState('');
 */
+
+    
+    
+
     const onConfirmPressed = () => {
     console.warn('onConfirmPressed')
     };
     const onSignInPress = () => {
-    console.warn('onSIgnInPress')
+    console.warn('onSignInPress')
     };
     const onResendPressed = () => {
             console.warn('onResendPressed')
             };
 
         return (
-
             <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.root}>
-               <Text style= {styles.title}>Confirm your email</Text>
+            <Text style= {styles.title}>Confirm your email</Text>
 
-               <CustomInput 
-               placeholder="Enter your confirmation code" 
-               value={code} 
-               setValue= {setCode} 
+        <CustomInput 
+        placeholder="Enter your confirmation code" 
+        value={code} 
+        setValue= {setCode} 
                />
 
-        <CustomButton text="Confirm" onPress={onConfirmPressed} />
+        <CustomButton text="Confirm" onPress={onConfirmPressed}/>
     
         <CustomButton
     text="Resend code"
     onPress={onResendPressed}
     type="SECONDARY"
     />
+
     <CustomButton
     text="Back to Sign In"
     onPress={onSignInPress}
@@ -55,4 +59,6 @@ import CustomButton from '../../components/CustomButton'
         padding: 20
     }
  })
+
+ export default ConfirmEmailScreen;
  
