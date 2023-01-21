@@ -7,7 +7,7 @@ import {View,
 import CustomInput from '../../components/CustomInput'
 import CustomButton from '../../components/CustomButton/CustomButton';
 import SocialSignInButtons from '../../components/SocialSignInButtons';
-
+import {useNavigation} from '@react-navigation/core'
 
 const SignUpScreen = () => {
     const [Username, setUsername] = useState('');
@@ -15,12 +15,15 @@ const SignUpScreen = () => {
     const [password, setPassword] = useState('');
     const [passwordRepeat, setPasswordRepeat] = useState('');
 
+    const navigation = useNavigation();
+
     const onRegisterPressed = () => {
-        console.warn('onRegisterPressed');
+        navigation.navigate('ConfirmEmail')
     };
     const onSignInPress = () => {
-            console.warn('onSignInPress');
-            };
+        navigation.navigate('SignIn')
+
+    };
     const onTermsOfUsePressed= () => {
             console.warn('onTermsOfUsePressed');
             };
