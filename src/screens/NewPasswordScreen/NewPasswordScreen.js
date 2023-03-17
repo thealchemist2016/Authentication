@@ -1,18 +1,15 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton'
 import {useNavigation} from '@react-navigation/native'
-import {useForm} from 'react-hook-form'
-
 const NewPasswordScreen = () => {
-    const {control, handleSubmit} = useForm();
+    const [code, setCode] = useState('');
+    const [newPassword, setNewPassword] = useState('');
  
     const navigation = useNavigation();
   
-    const onSubmitPressed = (data) => {
-        console.warn(data)
+    const onSubmitPressed = () => {
     navigation.navigate('HomeScreen')
     };
 
@@ -28,29 +25,18 @@ const NewPasswordScreen = () => {
             <Text style= {styles.title}>Reset your password</Text>
 
         <CustomInput 
-        placeholder="Code"
-        name="code"
-        control={control}
-        rules= {{required: "Code is required"}}
-         
-        
+        placeholder="Code" 
+        value={code} 
+        setValue= {setCode} 
                />
 
         <CustomInput 
-        placeholder="Enter your new password"
-        name="password"
-        control={control}
-        secureTextEntry
-        rules={{
-        required:'Password is required',
-        minLength: {
-        value: 8,
-        message: 'Password should be at least 8 characters long',
-        },
-    }}
-    />
+        placeholder="Enter your new password" 
+        value={newPassword} 
+        setValue= {setNewPassword} 
+               />
 
-        <CustomButton text="Submit" onPress={handleSubmit(onSubmitPressed)}/>
+        <CustomButton text="Submit" onPress={onSubmitPressed}/>
 
     <CustomButton
     text="Back to Sign In"
