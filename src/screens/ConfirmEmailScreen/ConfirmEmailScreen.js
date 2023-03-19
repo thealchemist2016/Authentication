@@ -1,22 +1,16 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import CustomInput from '../../components/CustomInput';
-import CustomButton from '../../components/CustomButton';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import SocialSignInButtons from '../../components/SocialSignInButtons';
-import {useNavigation} from '@react-navigation/core';
- import {useForm} from 'react-hook-form';
-
-const ConfirmEmailScreen = () => {
-    const {control, handleSubmit} = useForm();
+import CustomButton from '../../components/CustomButton'
+import {useNavigation} from '@react-navigation/core'
+ const ConfirmEmailScreen = () => {
+    const [code, setCode] = useState('');
  
 const navigation = useNavigation();
     
     
 
-    const onConfirmPressed = (data) => {
-        console.warn(data)
+    const onConfirmPressed = () => {
 navigation.navigate('HomeScreen');
     };
     const onSignInPress = () => {
@@ -32,15 +26,12 @@ navigation.navigate('HomeScreen');
             <Text style= {styles.title}>Confirm your email</Text>
 
         <CustomInput 
-        name="code"
-        control={control}
         placeholder="Enter your confirmation code" 
-        rules={{
-            required: 'Confirmation code is required'
-        }}
-    />
+        value={code} 
+        setValue= {setCode} 
+               />
 
-        <CustomButton text="Confirm" onPress={handleSubmit(onConfirmPressed)} />
+        <CustomButton text="Confirm" onPress={onConfirmPressed}/>
     
         <CustomButton
     text="Resend code"
