@@ -1,0 +1,2 @@
+import { withAuthenticator } from '@aws-amplify/ui-react-native';
+export default withAuthenticator(App);
